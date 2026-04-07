@@ -1,7 +1,11 @@
 aid: conagra-foods
-url: https://raw.githubusercontent.com/api-evangelist/conagra-foods/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/conagra-foods/refs/heads/main/apis.yml
 modified: '2026-03-23'
 apis: []
 common:
   - type: Website
     url: https://www.conagra-foods.com
+description: >-
+  ConAgra Foods is a leading branded food company in North America offering a portfolio
+  of frozen, refrigerated, and shelf-stable products under iconic consumer brands.
