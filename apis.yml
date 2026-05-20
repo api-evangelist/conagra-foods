@@ -29,6 +29,10 @@ x-successor: conagra-brands
 x-alias-of: conagra-brands
 apis: []
 common:
+  - type: GitHubOrganization
+    url: https://github.com/conagra
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/conagra-brands
   - type: Active Profile
     url: https://raw.githubusercontent.com/api-evangelist/conagra-brands/refs/heads/main/apis.yml
   - type: Successor Website
