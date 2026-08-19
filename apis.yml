@@ -34,7 +34,7 @@ tags:
   - Fortune 500
 created: '2025-03-23'
 modified: '2026-04-28'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 kind: company
 x-status: renamed
 x-successor: conagra-brands
