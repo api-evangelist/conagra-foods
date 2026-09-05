@@ -1,0 +1,39 @@
+generated: '2026-09-05'
+method: probed
+source: live DNS/TLS/HTTP probes of the ConAgra Foods legacy domain and the successor Conagra Brands domain
+note: >-
+  ConAgra Foods, Inc. renamed to Conagra Brands, Inc. in 2015. The legacy
+  conagrafoods.com domain is still registered and answers on TLS, but 301s to
+  conagrabrands.com. Both domains are probed here so the historical alias record
+  carries its own measurement rather than inheriting the successor's.
+hosts:
+- host: www.conagrabrands.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 12 03:26:32 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+  note: Cloudflare returns HTTP 429 / interactive challenge to non-browser clients; the HSTS header is still emitted.
+- host: conagrafoods.com
+  https: true
+  tls_version: TLSv1.2
+  cert_expires: Feb  3 23:59:59 2027 GMT
+  hsts: null
+  redirects_to: https://conagrabrands.com/
+  http_status: 301
+  note: Legacy ConAgra Foods domain; permanent redirect to the successor brand.
+domains:
+- domain: conagrabrands.com
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: true
+  dmarc_policy: reject
+- domain: conagrafoods.com
+  dnssec: false
+  caa: []
+  spf: true
+  spf_record: 'v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ~all'
+  dmarc: true
+  dmarc_policy: reject
+  dmarc_record: 'v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com'

@@ -1,0 +1,56 @@
+generated: '2026-09-05'
+method: probed
+source: >-
+  Direct unauthenticated HTTPS probes of the named /.well-known/ path list on the
+  ConAgra Foods legacy domain and the Conagra Brands successor domain, 2026-09-05.
+note: >-
+  Nothing was found. ConAgra Foods, Inc. renamed to Conagra Brands, Inc. in 2015;
+  conagrafoods.com now permanently redirects (301) to conagrabrands.com, which
+  answers a clean 404 on every named discovery path. No WellKnown or SecurityTxt
+  pointer is emitted, because a recorded absence is not a served surface.
+  conagrafoods.com and conagrabrands.com sit behind Cloudflare, which answers
+  non-browser clients with an HTTP 429 interactive challenge on the apex; the
+  www host answers normally and is the authoritative measurement here.
+hosts:
+- host: www.conagrabrands.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: conagrabrands.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    note: redirects to www.conagrabrands.com
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+- host: conagrafoods.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    note: legacy ConAgra Foods domain; 301 to https://conagrabrands.com/
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301

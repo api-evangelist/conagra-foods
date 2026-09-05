@@ -1,0 +1,50 @@
+# ConAgra Foods
+
+> ConAgra Foods, Inc. is the FORMER corporate name of Conagra Brands, Inc., the
+> Chicago-based North American branded consumer packaged goods (CPG) food company.
+> In 2015 the company spun off its foodservice ingredients business as Lamb Weston
+> and renamed the remaining packaged-foods business to Conagra Brands, Inc. This is
+> a historical alias record. No public developer API, SDK, webhook surface or
+> developer portal was ever published under the ConAgra Foods brand, and none is
+> published under the successor brand today.
+
+## Status
+
+- Record kind: historical alias / renamed company
+- Successor: Conagra Brands, Inc. — https://www.conagrabrands.com
+- Spin-off: Lamb Weston — https://www.lambweston.com
+- Legacy domain: https://conagrafoods.com — HTTP 301 to https://conagrabrands.com/
+- Active API Evangelist profile: https://raw.githubusercontent.com/api-evangelist/conagra-brands/refs/heads/main/apis.yml
+
+## API surface
+
+Probed 2026-09-05, unauthenticated, on conagrafoods.com, conagrabrands.com and
+www.conagrabrands.com:
+
+- No OpenAPI, Swagger, AsyncAPI, GraphQL SDL or Postman collection published
+  (/openapi.json, /swagger.json, /api-docs all HTTP 404 on www.conagrabrands.com)
+- No /llms.txt (HTTP 404)
+- No /.well-known/ discovery documents — security.txt, openid-configuration,
+  oauth-authorization-server, api-catalog, ai-plugin.json, agent-card.json and
+  agent.json all HTTP 404
+- No A2A Agent Card, no MCP server
+- GitHub organization https://github.com/conagra exists but publishes zero public
+  repositories
+- No first-party SDK on npm, PyPI or RubyGems
+
+Partner, foodservice, retail and supplier integrations are handled through direct
+B2B agreements rather than a public developer surface.
+
+## Links
+
+- Successor website: https://www.conagrabrands.com
+- Foodservice: https://www.conagrafoodservice.com
+- Conagra RISE (venture/innovation): https://conagrarise.com
+- GitHub organization: https://github.com/conagra
+- LinkedIn: https://www.linkedin.com/company/conagra-brands
+- Wikipedia: https://en.wikipedia.org/wiki/Conagra_Brands
+
+---
+generated: 2026-09-05
+method: generated
+source: apis.yml + live probes recorded in well-known/conagra-foods-well-known.yml and security/conagra-foods-domain-security.yml

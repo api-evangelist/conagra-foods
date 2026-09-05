@@ -44,7 +44,7 @@ tags:
   - Renamed
   - Fortune 500
 created: '2025-03-23'
-modified: '2026-04-28'
+modified: '2026-09-05'
 specificationVersion: '0.23'
 kind: company
 x-status: renamed
@@ -52,14 +52,18 @@ x-successor: conagra-brands
 x-alias-of: conagra-brands
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/conagra-foods-domain-security.yml
+  - type: LLMsTxt
+    url: llms/conagra-foods-llms.txt
+  - type: Website
+    url: https://www.conagrabrands.com
   - type: GitHubOrganization
     url: https://github.com/conagra
   - type: LinkedIn
     url: https://www.linkedin.com/company/conagra-brands
   - type: Active Profile
     url: https://raw.githubusercontent.com/api-evangelist/conagra-brands/refs/heads/main/apis.yml
-  - type: Successor Website
-    url: https://www.conagrabrands.com
   - type: Lamb Weston (spin-off)
     url: https://www.lambweston.com
   - type: Wikipedia
@@ -67,3 +71,29 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    The ConAgra Foods brand was retired in 2015 when the company renamed to Conagra
+    Brands and spun off Lamb Weston; conagrafoods.com now 301s to conagrabrands.com,
+    whose www host returns a clean 404 on every discovery path and whose GitHub
+    organization publishes zero public repositories.
+  evidence:
+    - url: https://conagrafoods.com/
+      status: 301
+    - url: https://www.conagrabrands.com/.well-known/api-catalog
+      status: 404
+    - url: https://www.conagrabrands.com/openapi.json
+      status: 404
+    - url: https://api.github.com/orgs/conagra/repos
+      status: 200
+  checked: '2026-09-05'
+x-parent: conagra-brands
+x-relationship: rebrand-predecessor
+x-acquired: 2016
